@@ -1,7 +1,6 @@
 'use strict';
 const axios = require('axios');
 const Player = require('../models/player')();
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const { data } = await axios.get('https://www.easports.com/fifa/ultimate-team/api/fut/item');
