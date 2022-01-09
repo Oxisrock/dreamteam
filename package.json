@@ -2,16 +2,31 @@
   "name": "teamdream",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "allPlayers.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "migrations": "cd server && npx sequelize-cli db:migrate && cd ..",
+    "rollback": "cd server && npx sequelize-cli db:seed:undo && npx sequelize-cli db:migrate:undo && cd..",
+    "seeders": "cd server && npx sequelize-cli db:seed:all && cd .."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "next": "^12.0.7",
+    "next-connect": "^0.11.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sequelize": "^6.12.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
   }
 }
