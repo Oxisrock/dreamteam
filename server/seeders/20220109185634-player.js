@@ -31,28 +31,6 @@ module.exports = {
       
       currentPage++;
     }
-
-    return;
-
-    const playersFormatedPromise = playersFormated.map(async (item) =>
-      await Player.findOrCreate({
-        where: { id: item.id },
-        defaults: item
-      })
-    );
-    const playersCollection = await Promise.all(playersFormatedPromise);
-
-    console.log(playersCollection);
-
-    return;
-    /*
-    await queryInterface.bulkInsert('Players', [{
-      firstName: 'John',
-      lastName: 'Doe',
-      email: 'example@example.com',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }]);*/
   },
 
   down: async (queryInterface, Sequelize) => {
