@@ -11,7 +11,7 @@ const Nav = (props) => {
                         {/* ml-auto still works just fine*/}
                         <div className="navbar-nav ml-auto">
                             <a className="nav-link active" aria-current="page" href="/">Home</a>
-                            <a className="nav-link" href="/searchPlayers">Search player</a>
+                            <a className="nav-link" href="/players/search">Search player</a>
                         </div>
                     </div>
                 </div>

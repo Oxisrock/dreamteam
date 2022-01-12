@@ -2,7 +2,8 @@ import styles from '../../../styles/Card.module.css';
 import Slider from "react-slick";
 import Router from "next/router";
 const settings = {
-    dots: true,
+    dots: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
