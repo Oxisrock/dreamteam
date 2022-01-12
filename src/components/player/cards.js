@@ -2,14 +2,45 @@ import styles from '../../../styles/Card.module.css';
 import Slider from "react-slick";
 import Router from "next/router";
 const settings = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
+    rows: 2,
     slidesToShow: 3,
     slidesToScroll: 3,
-    rows: 2,
     centerPadding: '0',
+    infinite: true,
+    dots: true,
+    speed: 500,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                rows: 2,
+                centerPadding: '0',
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                rows: 1,
+
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
 };
 const Card = (props) => {
     return (
@@ -17,7 +48,7 @@ const Card = (props) => {
             <Slider {...settings}>
                 {props.players.map((player) => (
                     <div className='p-2' key={player.id}>
-                        <div className="card mb-3" key={player.id} onClick={e => Router.push('/players/id', '/players/'+player.id)}>
+                        <div className="card mb-3" key={player.id} onClick={e => Router.push('/players/id', '/players/' + player.id)}>
                             <img src="https://www.fifaultimateteam.it/en/wp-content/uploads/2019/10/Wallpaper-Desktop@2x-2.png" className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className={styles.playerName}>{player.name}</h5>
