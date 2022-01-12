@@ -15,19 +15,19 @@ se debe agregar los datos
  + para poder devolver los seeders y las migraciones
 
 #ENDPOINTS
-GET /api/v1/players?search=jesus&order=asc&page=1&pageitems=10
-PARAMETROS
-QUERIES
-*search
-*order
-*page
-*pageitems
+- GET /api/v1/players?search=jesus&order=asc&page=1&pageitems=10
+- PARAMETROS
+- QUERIES
+- *search
+- *order
+- *page
+- *pageitems
 
 POST /api/v1/team
-PARAMETROS
-BODY
-*team
-QUERIES
-*order
-*page
-*pageitems
+- *PARAMETROS
+- BODY
+- *team
+- QUERIES
+- *order
+- *page
+- *pageitems
