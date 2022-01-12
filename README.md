@@ -13,3 +13,21 @@ se debe agregar los datos
  + para rellenar los datos de esa tabla
 3. npm run rollback
  + para poder devolver los seeders y las migraciones
+
+#ENDPOINTS
+GET /api/v1/players?search=jesus&order=asc&page=1&pageitems=10
+PARAMETROS
+QUERIES
+*search
+*order
+*page
+*pageitems
+
+POST /api/v1/team
+PARAMETROS
+BODY
+*team
+QUERIES
+*order
+*page
+*pageitems
